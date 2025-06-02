@@ -11,6 +11,7 @@ A command-line tool to detect hardcoded literal values in Python (AST-based) and
 
 * Analyzes **Python** (`.py`) files using Abstract Syntax Trees (AST) for accuracy.
 * Analyzes **JavaScript** (`.js`) files using Regular Expressions (Regex) for common patterns.
+* Analyzes **Java** (`.java`) files using Regular Expressions (Regex) to identify variables and constants
 * Recursively scans specified directories.
 * Interactive Command-Line Interface (CLI) menu.
 * Clear output: highlights file, line number, variable name, and detected value.
@@ -23,6 +24,8 @@ A command-line tool to detect hardcoded literal values in Python (AST-based) and
 * **Python (.py):** AST-based analysis provides high accuracy for direct literal assignments (strings, numbers, lists, dicts, etc.).
 
 * **JavaScript (.js):** Regex-based analysis targets common single-line literal assignments (`var`, `let`, `const`). This method is effective for simpler cases but less precise than AST analysis.
+
+* **Java (.java):** Regex-based analysis that detects variable declarations and constants (`static final`) with hardcoded literal values.
 
 ---
 

@@ -1,0 +1,28 @@
+{
+    "languages": [
+        {
+            "id": "python",
+            "name": "Python",
+            "extension": ".py",
+            "module_path": "logicForLanguages.python_analyzer",
+            "function_name": "find_hardcoded_in_python_file",
+            "disclaimer": null
+        },
+        {
+            "id": "javascript",
+            "name": "JavaScript",
+            "extension": ".js",
+            "module_path": "logicForLanguages.javascript_analyzer",
+            "function_name": "find_hardcoded_in_js_file",
+            "disclaimer": "Note: JavaScript analysis uses Regular Expressions. It aims to find simple, single-line literal assignments. It may not catch all cases and might have false positives/negatives with complex code or multi-line literals."
+        },
+        {
+            "id": "java",
+            "name": "Java",
+            "extension": ".java",
+            "module_path": "logicForLanguages.java_analyzer",
+            "function_name": "find_hardcoded_in_java_file",
+            "disclaimer": "A análise Java utiliza expressões regulares para detectar variáveis/constantes com valores literais. Funciona melhor com declarações em linha única e pode não identificar todas as construções complexas."
+        }
+    ]
+}
