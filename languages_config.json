@@ -22,7 +22,7 @@
             "extension": ".java",
             "module_path": "logicForLanguages.java_analyzer",
             "function_name": "find_hardcoded_in_java_file",
-            "disclaimer": "A análise Java utiliza expressões regulares para detectar variáveis/constantes com valores literais. Funciona melhor com declarações em linha única e pode não identificar todas as construções complexas."
+            "disclaimer": "Java parsing uses regular expressions to detect variables/constants with literal values. It works best with single-line statements and cannot identify all complex constructs."
         }
     ]
 }

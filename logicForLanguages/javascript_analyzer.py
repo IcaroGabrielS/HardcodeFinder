@@ -12,6 +12,7 @@ _JS_ASSIGNMENT_REGEX = re.compile(
     r"^\s*(?:var|let|const)\s+([a-zA-Z_$][\w$]*)\s*=\s*(" + _JS_LITERAL_PATTERN_STR + r")\s*;?\s*(?:\/\/.*)?$",
     re.VERBOSE  
 )
+
 def find_hardcoded_in_js_file(filepath):
     """
     Analyzes a single JavaScript file for hardcoded variable assignments using regex.

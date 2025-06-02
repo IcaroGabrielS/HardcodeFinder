@@ -42,6 +42,7 @@ def _get_value_representation_python(node):
                  pairs.append(f"{key_repr}: {value_repr}")
         return f"{{{', '.join(pairs)}}}"
     return "<complex_value>"
+
 class _PythonHardcodedFinderVisitor(ast.NodeVisitor):
     """
     AST Visitor for finding hardcoded variables in Python code.
@@ -49,6 +50,7 @@ class _PythonHardcodedFinderVisitor(ast.NodeVisitor):
     """
     def __init__(self):
         self.hardcoded_vars = []
+
     def visit_Assign(self, node):
         if _is_literal_node_python(node.value):
             for target in node.targets:
@@ -59,6 +61,7 @@ class _PythonHardcodedFinderVisitor(ast.NodeVisitor):
                         "value": _get_value_representation_python(node.value)
                     })
         self.generic_visit(node)
+        
     def visit_AnnAssign(self, node):
         if node.value and _is_literal_node_python(node.value): 
             if isinstance(node.target, ast.Name):
@@ -68,6 +71,7 @@ class _PythonHardcodedFinderVisitor(ast.NodeVisitor):
                     "value": _get_value_representation_python(node.value)
                 })
         self.generic_visit(node)
+
 def find_hardcoded_in_python_file(filepath):
     """
     Analyzes a single Python file for hardcoded variables using AST.

@@ -1,4 +1,5 @@
 import re
+
 _JAVA_LITERAL_PATTERN_STR = r"""
     (?:\"(?:\\.|[^\"\\])*\") |        
     (?:\'(?:\\.|[^\'\\])*\') |        
@@ -15,6 +16,7 @@ _JAVA_DECLARATION_REGEX = re.compile(
     r")\s*;(?:\s*//.*)?$",                                                       
     re.VERBOSE
 )
+
 _JAVA_CONSTANT_REGEX = re.compile(
     r"^\s*(?:(?:private|public|protected)\s+)?static\s+final\s+"                
     r"(?:[a-zA-Z][\w.$]*(?:<[^>]+>)?)\s+"                                       
