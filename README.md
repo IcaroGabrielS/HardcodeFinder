@@ -53,7 +53,6 @@ A command-line tool to detect hardcoded literal values in Python (AST-based) and
     ```bash
     python mainFinder.py
     ```
-    *(Adjust script name if yours is different, e.g., `hardcode_finder_main.py`)*
 
 2.  Use the interactive menu to select the language and provide the full path to the directory you wish to scan.
 
