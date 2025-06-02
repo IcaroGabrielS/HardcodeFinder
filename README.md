@@ -64,6 +64,7 @@ python mainFinder.py [directory] [options]
 - `--python`: Analyze only Python files
 - `--javascript`: Analyze only JavaScript files
 - `--java`: Analyze only Java files
+- `--output / -o: Save results to a JSON file
 
 ### Examples
 
